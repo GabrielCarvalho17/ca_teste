@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*
+ Sobrescrevendo variáveis do Bootstrap
+ $accordion-icon-color: #292d31;
+ $accordion-icon-active-color: #292d31;
+ $accordion-border-radius: 0;
+*/
+
+// Importando Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+/*
+ Remover box-shadow e outline no foco
+ .accordion-button:focus {
+     box-shadow: none; // Remove o box-shadow no foco
+     outline: none; // Remove o outline no foco
+ }
+
+ Estilo para o botão do acordeão quando está colapsado (não ativo)
+ .accordion-button.collapsed {
+     background-color: transparent; // Remove a cor de fundo quando colapsado
+     color: inherit; // Mantém a cor do texto padrão
+ }
+
+ Estilo para o botão do acordeão quando está expandido (ativo)
+ .accordion-button:not(.collapsed) {
+     background-color: transparent; // Remove a cor de fundo quando ativo
+     color: inherit; // Mantém a cor do texto padrão
+ }
+*/
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilização para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Largura da barra de rolagem */
+}
+
+/* Estilização para a parte interna da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    /* Cor de fundo do track */
+    border-radius: 10px;
+    /* Border-radius do track */
+}
+
+/* Estilização para o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    /* Cor do polegar */
+    border-radius: 10px;
+    /* Border-radius do polegar */
+}
+
+/* Estilização ao passar o mouse sobre o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+    background: #b2b2b2;
+    /* Cor do polegar ao passar o mouse */
+}
