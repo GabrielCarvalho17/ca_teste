@@ -1,15 +1,34 @@
 <template>
   <div v-show="mobile">
-    <div class="container position-relative d-flex align-items-center gap-3" style="margin-top: 70px; margin-bottom: 70px;">
+    <div class="container mb-4 mt-4">
+      <h5 class="section-title">Nossa equipe</h5>
+      <p class="section-description" style="margin: 0px;">
+        Nossa equipe é formada por profissionais dedicados e experientes. Estamos comprometidos em fornecer o
+        melhor cuidado possível.</p>
+    </div>
+    <div class="container position-relative d-flex align-items-center gap-3 mt-4">
       <div ref="scrollContainer" class="scroll-container">
         <div class="card-container">
           <slot></slot>
         </div>
       </div>
     </div>
+    <div class="container mb-4 mt-4">
+      <p class="section-description" style="margin: 0px;">
+        Cada membro possui uma especialização única, garantindo um atendimento completo e
+        personalizado.
+      </p>
+    </div>
   </div>
   <div v-show="!mobile">
-    <div class="container position-relative d-flex align-items-center gap-3" style="margin-top: 70px; margin-bottom: 70px;">
+    <div class="container mb-4 mt-4">
+      <h5 class="section-title">Nossa equipe</h5>
+      <p class="section-description" style="margin: 0px;">
+        Nossa equipe é formada por profissionais dedicados e experientes. Estamos comprometidos em fornecer o
+        melhor cuidado possível.</p>
+    </div>
+    <div class="container position-relative d-flex align-items-center gap-3" style="margin-bottom: 30px;">
+
       <img src="@/assets/img/arrow-left-circle.svg" class="arrow-left arrow" alt="Previous" @click="prevSlide" />
 
       <div ref="scrollContainer" class="scroll-container">
@@ -20,7 +39,14 @@
 
       <img src="@/assets/img/arrow-right-circle.svg" class="arrow-right arrow" alt="Next" @click="nextSlide" />
     </div>
+    <div class="container mb-4 mt-4">
+      <p class="section-description" style="margin: 0px;">
+        Cada membro possui uma especialização única, garantindo um atendimento completo e
+        personalizado.
+      </p>
+    </div>
   </div>
+
 </template>
 
 <script>

@@ -6,6 +6,8 @@ import HeroSection from './HeroSection.vue';
 import SplitScreen from './SplitScreen.vue';
 import Card from './Card.vue';
 import CarouselCards from './CarouselCards.vue';
+import CarouselClinic from './CarouselClinic.vue';
+import GoogleMap from './GoogleMap.vue';
 
 
 export {
@@ -17,5 +19,7 @@ export {
     SplitScreen,
     Card,
     CarouselCards,
+    CarouselClinic,
+    GoogleMap,
 
 };

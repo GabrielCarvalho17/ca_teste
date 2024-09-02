@@ -4,6 +4,9 @@
     <OffCanvas />
     <HeroSection />
     <LayoutPhoto />
+
+    <CarouselClinic />
+
     <SplitScreen title="Demandas que Atendemos" :items="[
       '<strong>Transtornos de Ansiedade</strong> (ansiedade generalizada, fobia social, pânico, TEPT)',
       '<strong>Depressão</strong>',
@@ -22,16 +25,6 @@
       '<strong>Supervisão Clínica:</strong> Aperfeiçoamento de técnicas e autoconhecimento para profissionais da psicologia.'
     ]" :textLeft="false" :showDescription="false" />
 
-    <div class="container">
-      <h5 class="section-title">Nossa equipe</h5>
-      <p class="section-description" style="margin: 0px;">
-        Nossa equipe é formada por profissionais dedicados e experientes. Estamos comprometidos em fornecer o
-        melhor cuidado possível.</p>
-      <p class="section-description" style="margin: 0px;">
-        Cada membro possui uma especialização única, garantindo um atendimento completo e
-        personalizado.
-      </p>
-    </div>
 
     <CarouselCards>
       <Card titulo="Profissional 1" descricao="Texto - Profissional 1" />
@@ -48,30 +41,15 @@
       <Card titulo="Profissional 12" descricao="Texto - Profissional 12" />
     </CarouselCards>
 
-    <div class="container d-flex flex-column align-items-center pt-3 pb-3 gap-5 position-relative">
-      <div>
-        <div class="circle shadow bg-white d-flex flex-column align-items-center justify-content-center">
-          1
-        </div>
-      </div>
-      <div class="circle shadow bg-white d-flex flex-column align-items-center justify-content-center">
-        2
-      </div>
-      <div class="circle shadow bg-white d-flex flex-column align-items-center justify-content-center">
-        3
-      </div>
-      <div class="circle shadow bg-white d-flex flex-column align-items-center justify-content-center">
-        4
-      </div>
-    </div>
 
+    <GoogleMap />
 
     <Footer />
   </main>
 </template>
 
 <script>
-import { NavBar, OffCanvas, Footer, HeroSection, LayoutPhoto, SplitScreen, CarouselCards, Card } from './components/';
+import { NavBar, OffCanvas, Footer, HeroSection, LayoutPhoto, SplitScreen, CarouselCards, Card, CarouselClinic, GoogleMap } from './components/';
 
 export default {
   name: 'App',
@@ -83,44 +61,15 @@ export default {
     HeroSection,
     SplitScreen,
     CarouselCards,
-    Card
+    Card,
+    CarouselClinic,
+    GoogleMap
   },
 };
 </script>
 
 
 <style lang="scss">
-.container::before {
-  content: '';
-  position: absolute;
-  top: 25px;
-  /* ajusta conforme necessário */
-  left: 50%;
-  width: 3px;
-  /* largura da linha */
-  height: calc(100% - 50px);
-  /* ajusta conforme necessário */
-  background: repeating-linear-gradient(black 0,
-      black 5px,
-      transparent 5px,
-      transparent 10px);
-  transform: translateX(-50%);
-  z-index: -1;
-  /* para garantir que fique atrás dos círculos */
-}
-
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: larger;
-  font-weight: 500;
-  position: relative;
-  background-color: white;
-}
-
-
-
 #app {
   display: flex;
   flex-direction: column;
@@ -129,7 +78,7 @@ export default {
 
 .vazio {
   flex: 1;
-  min-height: 2000px;
+  min-height: 1000px;
   /* O conteúdo principal ocupa o espaço restante */
 }
 
