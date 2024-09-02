@@ -85,13 +85,23 @@ export default {
         const infoWindowContent = document.createElement('div');
         infoWindowContent.style.padding = '10px';
         infoWindowContent.style.backgroundColor = '#ffffff';
-        infoWindowContent.style.borderRadius = '8px';
-        infoWindowContent.style.boxShadow = '0 2px 6px rgba(0,0,0,0.3)';
+        infoWindowContent.classList.add('shadow', 'rounded', 'd-flex', 'flex-row');
+
+        // Definindo a URL da imagem usando require
+        const imageUrl = require('@/assets/img/local-clinica.jpeg');
+
+        // Definindo o conteúdo HTML
         infoWindowContent.innerHTML = `
-          <h5 style="margin: 0; font-size: 16px;">Clínica Abertamente</h5>
+        <div>
+          <img src="${imageUrl}" class="rounded" style="width: 50px; height: 50px; margin-right: 10px;" />
+        </div>
+        <div> 
+          <h5 style="margin: 0 0 5px 0; font-size: 16px;">Clínica Abertamente</h5>
           <p style="margin: 0; font-size: 12px;">Rua Belo Horizonte, 1558 - Centro</p>
-          <p style="margin: 0; font-size: 12px;">Seg-Sex: 08:00 - 18:00</p>
+          <p style="margin: 0; font-size: 12px;">Seg - Sex: 08:00 - 18:00</p>
+        </div>
         `;
+
 
         // Posicionando o balão de detalhes acima do marcador
         new AdvancedMarkerElement({
@@ -122,9 +132,8 @@ export default {
 }
 
 .section-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
 }
-
 </style>
