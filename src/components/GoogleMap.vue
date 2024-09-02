@@ -24,8 +24,6 @@
 
 
 <script>
-
-
 import { Loader } from '@googlemaps/js-api-loader';
 
 export default {
@@ -33,7 +31,7 @@ export default {
   async mounted() {
     this.$nextTick(async () => {
       const loader = new Loader({
-        apiKey: 'AIzaSyBztPzuJjueRREUXh3klDJhveKVK7_Q5x4', // Substitua pela sua chave de API do .env
+        apiKey: 'AIzaSyBztPzuJjueRREUXh3klDJhveKVK7_Q5x4',
         version: 'weekly',
       });
 
@@ -50,7 +48,7 @@ export default {
           fullscreenControl: false,
         });
 
-        // Crie o conteúdo do marcador com o ícone e o rótulo
+        // Criação do conteúdo do marcador com ícone e rótulo
         const markerContent = document.createElement('div');
         markerContent.style.position = 'relative';
         markerContent.style.display = 'flex';
@@ -69,19 +67,42 @@ export default {
         labelElement.style.color = '#41B883';
         labelElement.style.fontSize = '14px';
         labelElement.style.fontWeight = 'bold';
-        labelElement.style.marginTop = '0px'; // Ajuste a margem superior para posicionar abaixo do ícone
+        labelElement.style.marginTop = '0px';
 
-        // Adicione o ícone e o rótulo ao conteúdo do marcador
+        // Adicionando ícone e rótulo ao conteúdo do marcador
         markerContent.appendChild(iconElement);
         markerContent.appendChild(labelElement);
 
-        // Crie o marcador usando AdvancedMarkerElement
+        // Criação do marcador usando AdvancedMarkerElement
         new AdvancedMarkerElement({
           position: { lat: -23.31823771555449, lng: -51.16684439062751 },
           map: map,
           content: markerContent,
           title: 'Clínica Abertamente',
         });
+
+        // Criação do conteúdo do balão de detalhes (infowindow)
+        const infoWindowContent = document.createElement('div');
+        infoWindowContent.style.padding = '10px';
+        infoWindowContent.style.backgroundColor = '#ffffff';
+        infoWindowContent.style.borderRadius = '8px';
+        infoWindowContent.style.boxShadow = '0 2px 6px rgba(0,0,0,0.3)';
+        infoWindowContent.innerHTML = `
+          <h5 style="margin: 0; font-size: 16px;">Clínica Abertamente</h5>
+          <p style="margin: 0; font-size: 12px;">Rua Belo Horizonte, 1558 - Centro</p>
+          <p style="margin: 0; font-size: 12px;">Seg-Sex: 08:00 - 18:00</p>
+        `;
+
+        // Posicionando o balão de detalhes acima do marcador
+        new AdvancedMarkerElement({
+          position: { lat: -23.31823771555449, lng: -51.16684439062751 },
+          map: map,
+          content: infoWindowContent,
+          title: 'Detalhes da Clínica',
+        });
+
+        // Posicionando o balão um pouco acima do marcador
+        infoWindowContent.style.transform = 'translateY(-100%) translateY(-10px)';
 
       } catch (error) {
         console.error('Erro ao carregar o Google Maps:', error);
