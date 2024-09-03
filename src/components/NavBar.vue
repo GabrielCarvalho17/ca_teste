@@ -22,7 +22,7 @@
                         <a class="nav-link" href="#">Metodologia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link" href="#">Localização</a>
                     </li>
                 </ul>
             </div>

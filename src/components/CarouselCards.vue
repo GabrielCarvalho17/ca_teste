@@ -39,7 +39,7 @@
 
       <img src="@/assets/img/arrow-right-circle.svg" class="arrow-right arrow" alt="Next" @click="nextSlide" />
     </div>
-    <div class="container mb-4 mt-4">
+    <div class="container mb-4">
       <p class="section-description" style="margin: 0px;">
         Cada membro possui uma especialização única, garantindo um atendimento completo e
         personalizado.

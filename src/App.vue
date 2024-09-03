@@ -16,7 +16,7 @@
       '<strong>Transtornos de Personalidade</strong>',
       '<strong>TOC</strong> (Transtorno Obsessivo Compulsivo)',
       '<strong>Transtorno do Controle de Impulsos</strong>',
-      'E outros!'
+      'E outros'
     ]" :textLeft="true" :showDescription="false" />
 
     <SplitScreen title="Serviços" :items="[
@@ -41,6 +41,7 @@
       <Card titulo="Profissional 12" descricao="Texto - Profissional 12" />
     </CarouselCards>
 
+    <GuideSteps />
 
     <GoogleMap />
 
@@ -49,7 +50,19 @@
 </template>
 
 <script>
-import { NavBar, OffCanvas, Footer, HeroSection, LayoutPhoto, SplitScreen, CarouselCards, Card, CarouselClinic, GoogleMap } from './components/';
+import {
+  NavBar,
+  OffCanvas,
+  Footer,
+  HeroSection,
+  LayoutPhoto,
+  SplitScreen,
+  CarouselCards,
+  Card,
+  CarouselClinic,
+  GoogleMap,
+  GuideSteps
+} from './components/';
 
 export default {
   name: 'App',
@@ -63,7 +76,8 @@ export default {
     CarouselCards,
     Card,
     CarouselClinic,
-    GoogleMap
+    GoogleMap,
+    GuideSteps,
   },
 };
 </script>

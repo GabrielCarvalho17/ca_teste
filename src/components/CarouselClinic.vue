@@ -17,21 +17,21 @@
       </div>
       <div class="carousel-inner rounded">
         <div class="carousel-item active">
-          <div class="bg-empty d-block w-100" style="height: 420px;" alt="..."></div>
+          <div class="bg-empty d-block w-100" style="height: 450px;" alt="..."></div>
           <div class="carousel-caption d-none d-md-block text-secondary">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <div class="bg-empty d-block w-100" style="height: 420px;" alt="..."></div>
+          <div class="bg-empty d-block w-100" style="height: 450px;" alt="..."></div>
           <div class="carousel-caption d-none d-md-block text-secondary">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <div class="bg-empty d-block w-100" style="height: 420px;" alt="..."></div>
+          <div class="bg-empty d-block w-100" style="height: 450px;" alt="..."></div>
           <div class="carousel-caption d-none d-md-block text-secondary">
             <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>

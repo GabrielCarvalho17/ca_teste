@@ -90,5 +90,7 @@ export default {
   text-align: center;
   display: inline-block;
   width: 200px;
+  background-color: #41b883;
+  border-color: #41b883;
 }
 </style>

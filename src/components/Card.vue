@@ -6,7 +6,7 @@
       <div class="card-body custom-card-body">
         <div class="content-header">
           <h5 class="card-title text-center">{{titulo}}</h5>
-          <p class="card-text text-center">{{descricao}}</p>
+          <p class="card-text text-center">{{descricao}}</p>        
         </div>
         <div class="social-icons">
           <img :src="require('@/assets/img/facebook.svg')" class="logo" alt="Facebook Logo" />
